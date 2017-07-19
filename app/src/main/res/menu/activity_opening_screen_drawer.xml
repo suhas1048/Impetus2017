@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/about"
+            android:icon="@drawable/aboutus"
+            android:title="About" />
+        <item
+            android:id="@+id/website"
+            android:icon="@drawable/websiteicon"
+            android:title="Website" />
+        <item
+            android:id="@+id/Location"
+            android:icon="@drawable/location"
+            android:title="Location" />
+
+        <item
+            android:id="@+id/register"
+            android:icon="@drawable/register"
+            android:title="Register" />
+        <item
+            android:id="@+id/schedule"
+            android:icon="@drawable/datee"
+            android:title="Schedule" />
+        <item
+            android:id="@+id/sponsors"
+            android:icon="@drawable/sponsors"
+            android:title="Sponsors" />
+
+
+    </group>
+
+    <item android:title="Get in touch">
+        <menu>
+            <item
+                android:id="@+id/contactus"
+                android:icon="@drawable/contact"
+                android:title="Contact Us" />
+            <item
+                android:id="@+id/developer"
+                android:icon="@drawable/developers"
+                android:title="Developers" />
+        </menu>
+    </item>
+
+</menu>

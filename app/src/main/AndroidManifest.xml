@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="android.developers.uvce.impetus2017">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:noHistory="true"
+        android:screenOrientation="portrait"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Opening_screen"
+            android:label="@string/title_activity_opening_screen"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.developers.uvce.impetus2017.Opening_screen" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".NewsActivity"
+            android:label="@string/title_activity_news"
+            android:parentActivityName=".Opening_screen"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.developers.uvce.impetus2017.NewsActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.developers.uvce.impetus2017.Opening_screen" />
+        </activity>
+        <activity
+            android:name=".Forum_student"
+            android:label="@string/title_activity_forum_student"
+            android:parentActivityName=".Opening_screen"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.developers.uvce.impetus2017.Forum_student" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.developers.uvce.impetus2017.Opening_screen" />
+        </activity>
+        <activity
+            android:name=".Forum_form_submission"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.developers.uvce.impetus2017.Forum_form_submission" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.developers.uvce.impetus2017.Forum_student" />
+        </activity>
+        <activity
+            android:name=".EventsActivity"
+            android:label="@string/title_activity_events"
+            android:parentActivityName=".Opening_screen"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.developers.uvce.impetus2017.EventsActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.developers.uvce.impetus2017.Opening_screen" />
+        </activity>
+        <activity
+            android:name=".About"
+            android:label="@string/title_activity_about"
+            android:parentActivityName=".Opening_screen"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.developers.uvce.impetus2017.About" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.developers.uvce.impetus2017.Opening_screen" />
+        </activity>
+        <activity
+            android:name=".Website"
+            android:label="@string/title_activity_website"
+            android:parentActivityName=".Opening_screen"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.developers.uvce.impetus2017.Website" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.developers.uvce.impetus2017.Opening_screen" />
+        </activity>
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".MapsActivity"
+            android:label="@string/title_activity_maps">
+            <intent-filter>
+                <action android:name="android.developers.uvce.impetus2017.MapsActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.developers.uvce.impetus2017.Opening_screen" />
+        </activity>
+        <activity
+            android:name=".ChannelCode"
+            android:label="@string/title_activity_channel_code"
+            android:parentActivityName=".EventsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.developers.uvce.impetus2017.ChannelCode" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.developers.uvce.impetus2017.EventsActivity" />
+        </activity>
+        <activity
+            android:name=".Vaksamara"
+            android:label="@string/title_activity_vaksamara"
+            android:parentActivityName=".EventsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.developers.uvce.impetus2017.Vaksamara" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.developers.uvce.impetus2017.EventsActivity" />
+        </activity>
+        <activity
+            android:name=".Botnia"
+            android:label="@string/title_activity_botnia"
+            android:parentActivityName=".EventsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.developers.uvce.impetus2017.Botnia" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.developers.uvce.impetus2017.EventsActivity" />
+        </activity>
+        <activity
+            android:name=".ITwiz"
+            android:label="@string/title_activity_itwiz"
+            android:parentActivityName=".EventsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.developers.uvce.impetus2017.ITwiz" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.developers.uvce.impetus2017.EventsActivity" />
+        </activity>
+        <activity
+            android:name=".TheAlchemist"
+            android:label="@string/title_activity_the_alchemist"
+            android:parentActivityName=".EventsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.developers.uvce.impetus2017.TheAlchemist" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.developers.uvce.impetus2017.EventsActivity" />
+        </activity>
+        <activity
+            android:name=".AutoMania"
+            android:label="@string/title_activity_auto_mania"
+            android:parentActivityName=".EventsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.developers.uvce.impetus2017.AutoMania" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.developers.uvce.impetus2017.EventsActivity" />
+        </activity>
+        <activity
+            android:name=".Summit"
+            android:label="@string/title_activity_summit"
+            android:parentActivityName=".EventsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.developers.uvce.impetus2017.Summit" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.developers.uvce.impetus2017.EventsActivity" />
+        </activity>
+        <activity
+            android:name=".GameOfCodes"
+            android:label="@string/title_activity_game_of_codes"
+            android:parentActivityName=".EventsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.developers.uvce.impetus2017.GameOfCodes" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.developers.uvce.impetus2017.EventsActivity" />
+        </activity>
+        <activity
+            android:name=".Unlock"
+            android:label="@string/title_activity_unlock"
+            android:parentActivityName=".EventsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.developers.uvce.impetus2017.Unlock" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.developers.uvce.impetus2017.EventsActivity" />
+        </activity>
+        <activity
+            android:name=".MockPlacements"
+            android:label="@string/title_activity_mock_placements"
+            android:parentActivityName=".EventsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.developers.uvce.impetus2017.MockPlacements" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.developers.uvce.impetus2017.EventsActivity" />
+        </activity>
+        <activity
+            android:name=".Gaming"
+            android:label="@string/title_activity_gaming"
+            android:parentActivityName=".EventsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.developers.uvce.impetus2017.Gaming" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.developers.uvce.impetus2017.EventsActivity" />
+        </activity>
+        <activity
+            android:name=".TechAndLadder"
+            android:label="@string/title_activity_tech_and_ladder"
+            android:parentActivityName=".EventsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.developers.uvce.impetus2017.TechAndLadder" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.developers.uvce.impetus2017.EventsActivity" />
+        </activity>
+        <activity
+            android:name=".RoboRally"
+            android:label="@string/title_activity_robo_rally"
+            android:parentActivityName=".EventsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.developers.uvce.impetus2017.RoboRally" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.developers.uvce.impetus2017.EventsActivity" />
+        </activity>
+        <activity
+            android:name=".Sponsors"
+            android:label="@string/title_activity_sponsors"
+            android:parentActivityName=".Opening_screen"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.developers.uvce.impetus2017.Sponsors" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.developers.uvce.impetus2017.Opening_screen" />
+        </activity>
+        <activity
+            android:name=".ContactUs"
+            android:label="@string/title_activity_contact_us"
+            android:parentActivityName=".Opening_screen"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.developers.uvce.impetus2017.ContactUs" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.developers.uvce.impetus2017.Opening_screen" />
+        </activity>
+        <activity
+            android:name=".Developers"
+            android:label="@string/title_activity_developers"
+            android:parentActivityName=".Opening_screen"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.developers.uvce.impetus2017.Developers" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.developers.uvce.impetus2017.Opening_screen" />
+        </activity>
+        <activity
+            android:name="ieee.uvce.impetus2017.Schedule"
+            android:label="@string/title_activity_schedule"
+            android:parentActivityName=".Opening_screen"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="ieee.uvce.impetus2017.Schedule" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.developers.uvce.impetus2017.Opening_screen" />
+        </activity>
+        <activity
+            android:name=".Register"
+            android:label="@string/title_activity_register"
+            android:parentActivityName=".Opening_screen"
+            android:theme="@style/AppTheme.NoActionBar">
+
+            <intent-filter>
+                <action android:name="android.developers.uvce.impetus2017.Register" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.developers.uvce.impetus2017.Opening_screen" />
+        </activity>
+    </application>
+
+</manifest>
